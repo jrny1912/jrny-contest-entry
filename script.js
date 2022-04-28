@@ -28,6 +28,7 @@ function generateContent(difficulty) {
 function flipCard(item) {
     if (lockBoard) return;
     if (item === firstCard) return;
+    if (item.classList.contains('front-face')) return;
     item.classList.add('flip');
   
     if (!hasFlippedCard) {
